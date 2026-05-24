@@ -1,0 +1,20 @@
+{
+  "name": "jarvis-command-center-android",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "npx cap sync android",
+    "open": "npx cap open android",
+    "build:android": "cd android && ./gradlew assembleDebug",
+    "build:release": "cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/app": "^7.1.0",
+    "@capacitor/core": "^7.4.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.4"
+  }
+}
