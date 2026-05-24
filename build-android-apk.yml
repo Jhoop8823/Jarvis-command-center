@@ -31,7 +31,11 @@ jobs:
         run: npx cap add android
 
       - name: Sync Capacitor
-        run: npx cap sync android
+  run: |
+    mkdir -p android/app/src/main/assets
+    mkdir -p public
+    cp index.html public/index.html
+    npx cap sync android
 
       - name: Build debug APK
         run: cd android && ./gradlew assembleDebug
